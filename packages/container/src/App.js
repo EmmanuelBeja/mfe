@@ -2,11 +2,7 @@ import React from "react";
 import MarkertingApp from "./components/MarkertingApp";
 
 const App = () => {
-  return (
-    <div>
-      <MarkertingApp />
-    </div>
-  );
+  return <MarkertingApp />;
 };
 
 export default App;
