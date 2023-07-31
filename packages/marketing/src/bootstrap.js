@@ -27,12 +27,12 @@ const mount = (el, { onNavigate, defaultHistory }) => {
 // Context/Situation #1
 // We are running this file in development in isolation
 // we are using our local index.html file
-// which DEFINITELY has an element with an id of 'dev-marketing'
+// which DEFINITELY has an element with an id of '_marketing-dev-root'
 // We want to immediately render our app into that element
 if (process.env.NODE_ENV === "development") {
   const devRoot = document.querySelector("#_marketing-dev-root");
 
-  // Assuming our container doesn't have an element  with id 'dev-marketing'...
+  // Assuming our container doesn't have an element  with id '_marketing-dev-root'...
   if (devRoot) {
     // We are probably running in isolation
     mount(devRoot, { defaultHistory: createBrowserHistory() });
@@ -42,6 +42,6 @@ if (process.env.NODE_ENV === "development") {
 // Context/Situation #2
 // We are running this file in development or production
 // through the CONTAINER app
-// NO GUARANTEE that an element with an id of 'dev-marketing' exists
+// NO GUARANTEE that an element with an id of '_marketing-dev-root' exists
 // WE DO NOT WANT try to immediately render the app
 export { mount };
